@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Story of Swing Dance 一起搖擺</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  
+
+</head>
+<body>
+<!--  collapse 預設隱藏，設定在某種螢幕寬度下展開 expand 才看得到選單 -->
+<!--  預設 navbar-dark 讓行動版漢堡選單初始就能顯示淺色線條。否則畫面初始載入時是看不到漢堡線條的-->
+<nav class="navbar navbar-expand-md fixed-top navbar-top navbar-dark">
+  <div class="container">
+    <a href="#" class="navbar-brand eng">Swing Dance</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNavDropdown"> 
+      <ul class="navbar-nav ms-auto">
+<!--    ms-auto  讓nav-item左邊剩餘外距空間自動分配因而靠右邊。    -->
+        <li class="nav-item"><a href="#section_history" class="nav-link">歷史</a></li>
+        <li class="nav-item"><a href="#section_definition" class="nav-link">舞蹈特色</a></li>
+        
+        <li class="nav-item"><a href="#section_styles" class="nav-link">舞風介紹</a></li>
+        <li class="nav-item"><a href="#section_video" class="nav-link">表演欣賞 </a></li>
+        <li class="nav-item"><a href="#section_course" class="nav-link">課程</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container header__container">
+    <div class="header__title" data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)">
+      <h1 class="eng">Story of Swing Dance</h1>
+      <h2>一起搖擺</h2>
+    </div>
+ 
+    <p>─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───</p>
+    <h4>Ready to give it a Swing?</h4>
+  </div>
+</header>
+
+<section id="section_history">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <h2>
+          來自<span class="eng"> 1920 </span>年代 
+          <br>
+          令紐約客夜夜沉迷不已的
+          <br>
+          <span class="eng">Swing Dance</span></h2>
+          <p>當時的年代生活苦悶，人們週末時會去舞廳或是酒吧聽聽爵士樂跳跳舞，漸漸地舞蹈開始在美國紐約流行起來！Swing Dance 舞蹈的影響力也逐漸從黑人社區擴散到白人社交圈，更因為第二次世界大戰的關係，陸續襲捲到了歐洲。電影《 大亨小傳 》中的舞蹈查爾斯頓 (Charleston) 也是搖擺舞 (Swing Dance) 裡面的其中一種舞風。</p>
+      </div>
+
+      <div class="col-md-6 img_history" data-bottom-top="transform:translateX(150px);" data-center="transform:translateX(-50px);">
+        <img src="img/swing_dance-BW-pair-removebg-Big.png" alt="">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="section_definition">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 img_definition" data-bottom-top="opacity: 0; background-size: 108%; margin-top: -200px;" data-center="opacity: 1; background-size: 120%; margin-top: -140px;" >
+      </div>
+      <div class="col-lg-7 definition_text">
+        <h2>搖擺舞和國標舞的差別</h2>
+        <p>搖擺舞 (Swing Dance) 復古又俏皮，強調人與人之間的互動，不像國標舞每次都有固定的搭檔。
+          Swing Dance 是一種「社交舞」藉由跳舞來與人交流，幾乎每次都跟不同的人跳舞，通常一首歌的時間換一個舞伴，再加上「爵士樂」是非常即興的，就算是同一首歌、同一個樂手演奏，都不會聽到一模一樣版本的音樂。它的隨性也很令人著迷，每次聽都有不一樣的感覺。
+          這簡單易學又好玩的搖擺舞，流傳至今，成為都市人最愛的下班後生活娛樂！</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="section_styles">
+  <div class="container">
+    <div class="row gx-5">
+      <div class="col-sm-12 mb-3" data-bottom-top="transform: translateY(-50px); opacity: 0;" data-center="transform: translateY(0px); opacity: 1;">
+        <h2><span class="eng">Styles of Swing Dance</span>
+        <br>
+        四大舞風 
+        </h2>
+        <hr>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="img-wrap">
+          <img src="img/lindy-hop.jpg" alt="">
+        </div>
+        <h3 class="my-3"><span class="eng">Lindy Hop</span> 
+          <br>
+          林迪舞</h3>
+        <p>Lindy Hop 林迪舞盛行於 1920 – 1990 年，也是目前全世界最多人跳的的搖擺舞舞風！林迪舞的始祖還自查爾斯頓舞，曲風同樣以爵士音樂為背景，但這裡有一個小知識告訴大家，並非所有的爵士樂都可以跳林迪舞，而是需要以搖擺爵士樂（Swing Jazz）為主，除此之外，其實現在也有很多現代歌曲都可以跳上 Lindy Hop，富有彈性且高自由度的 Lindy 魅力就在於此！</p>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="img-wrap">
+          <img src="img/charleston.jpg" alt="">
+        </div>
+        <h3 class="my-3"><span class="eng">Charleston </span>
+          <br>
+          查爾斯頓舞</h3>
+        <p class="style_text">Charleston 是美國 1920-1930 年代流行的舞蹈，大家對他的印象應該源自於電影大亨小傳中，貴族們穿著華麗的服飾隨著爵士音樂盡情跳舞，歡樂且活潑的歌曲營造絕佳派對氣氛！在1923年作曲家詹姆士強森（James P. Johnson）創造一首 Charleston 歌曲，在美國主流舞曲流行，因為百老匯節目奔跑狂野（ Runnin’ Wild） 而使得 Charleston 聲名大噪。這種舞蹈可以單人、雙人、團體一起共舞，同時也是 Lindy Hop 的根基，Charleston 音樂節奏輕快活潑，舞蹈狂放熱情。</p>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="img-wrap">
+          <img src="img/bluesDance.webp" alt="">
+        </div>
+        <h3 class="my-3"><span class="eng">Blues</span>
+          <br>
+          藍調</h3>
+        <p class="style_text">Blues 源自於 1925 年至 1935 年間發展而成，Blues 的音樂擁有豐富情緒，給人一種憂愁、浪漫、憂鬱的情調，是一種藉由聆聽藍調樂去表達音樂情緒的即興社交舞蹈。隨著藍調樂的各種情緒、每個人聽音樂的方式不同，能有千變萬化的跳法！
+          最重要的是，享受在當下，享受與你共舞這首歌的夥伴一起「玩」這支舞蹈，欣賞對方臉上的笑容，體貼觀察並學習如何能讓你的夥伴跳得更舒服、更自在放鬆，這才是 Blues Dance 最大的魅力所在！</p>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="img-wrap">
+          <img src="img/Balboa-BW.png" alt="">
+        </div>
+        <h3  class="my-3"><span class="eng">Balboa</span> 
+          <br>
+          巴爾博亞舞</h3>
+        <p class="style_text">Balboa 起源於 1920 年代的南加州。興盛的原因來自於當時酒館舞池太小，空間無法容納 Lindy 或是 Charleston 大幅度擺動的舞步，進而發展出以優雅細碎舞步聞名的 Balboa。常被認為是 Swing 中最優雅的舞風，由於步伐移動距離較小，無論快歌或慢歌都能跳出多樣的腳步動作與變化！Balboa 主要以打招呼的擁抱姿勢進行，結合靠近身體的站位，建立舞者雙方更多的 Connection ，在較短的移動距離中以重心轉換、肢體帶領等方式，進行 Leader 與 Follower 之間的微妙溝通。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="section_video">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">         
+        <h2><span class="eng fs-1">───── ⋆⋅Show Time⋅⋆ ─────</span></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="video">
+        <div class="col-md-6 offset-md-3 col-12 embed-container">
+            <iframe 
+            src='https://www.youtube.com/embed/VcsI84aINjE?start=58' 
+            frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' 
+            allowfullscreen>
+          </iframe>
+        </div>
+    </div>
+      <!-- https://www.youtube.com/embed/VcsI84aINjE?start=54 -->
+      <!-- https://www.youtube-nocookie.com/embed/VcsI84aINjE?start=55?rel=0 -->
+
+    </div>
+  </div>
+</section>
+
+<section id="section_course">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" data-bottom-top="transform: translateY(-50px); opacity: 0;" data-center="transform: translateY(0px); opacity: 1;">
+        <h2>課程報名</h2>
+        <hr>
+      </div>
+     
+<!--  圖片和介紹文字      -->
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="card-img-cap">
+            <img src="img/SwingDance-green.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">搖擺經典班
+              <br> 
+              Swing Out Variation</h5>
+            <p class="card-text">
+              日期 : 05/04 - 06/29 每週四
+              <br>
+              時間 : 20:00 -2 1:00
+              <br>
+              地點 : 中山分校</p>
+            <a href="#" class="btn-sign-up">我想報名</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-4">
+        <div class="card" >
+          <div class="card-img-cap">
+            <img src="img/blueDance.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">延伸變化班
+              <br>
+              Lindy hop</h5>
+            <p class="card-text">
+              日期 : 05/16 - 07/04 每週二
+              <br>
+              時間 : 20:40 - 21:40
+              <br>
+              地點 : 行天宮分校</p>
+            <a href="#" class="btn-sign-up">我想報名</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="card-img-cap">
+            <img src="img/swing-dance-moment-05.webp" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">Sally老師專攻班
+                <br>
+                Solo A-Z</h5>
+              <p class="card-text">
+                日期 : 05/06 - 5/20 每周六
+                <br>
+                時間 : 19:30 - 20:30
+                <br>
+                地點 : 士林分校</p>
+              <a href="#" class="btn-sign-up">我想報名</a>
+          </div>
+        </div>
+       </div>
+<!--  圖片和介紹文字      -->
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer">
+    <div class="row">
+      <div class="col-md-5 px-5">
+        <h2 class="fs-1">Contact Us</h2>
+        <p>訂閱我們獲得每個月發布新最新課程通知</p>
+        <input type="text" class="form-control" placeholder="Email">
+        <button class="btn btn-outline-light ">訂閱</button>
+      </div>
+      <div class="col-md-7 mt-md-0 mt-5 px-5">
+        <div class="row">
+          <div class="col-md-3">
+            <p class="footer_item-title fs-5">關於課程</p>
+            <p class="footer_item"><a href="#">教室地點</a></p>
+            <p class="footer_item"><a href="#">報名須知</a></p>
+            <p class="footer_item"><a href="#">行為守則</a></p>
+          </div>
+          <div class="col-md-3 mt-sm-0 mt-3">
+            <p class="footer_item-title fs-5">精彩活動</p>
+            <p class="footer_item"><a href="#">復古風穿搭指南</a></p>
+            <p class="footer_item"><a href="#">下班後放鬆社交</a></p>
+            <p class="footer_item"><a href="#">品牌聯名合作活動</a></p>
+          </div>
+          <div class="col-md-6 mt-sm-0 mt-3">
+            <p class="footer_item-title fs-5">客服與機構資訊</p>
+            <p class="footer_item">SwingTogether 一起搖擺舞蹈工作室</p>
+            <p class="footer_item">台北市OO區OOO路二段0號2F</p>
+            <p class="footer_item">客服信箱 : hello@swingtogether.com</p>
+          </div>
+      </div>
+        </div>
+    </div>
+    
+  </div>
+</footer>
+
+<!-- 引入腳本 -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>

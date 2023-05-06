@@ -1,0 +1,324 @@
+$color_gold: #916019;
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline: 1px solid tomato;
+}
+
+a{
+  text-decoration: none;
+  display: block;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: top;
+}
+
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; //點擊頂端章節目錄畫面滑動到標題時讓 navbar 不會擋到標題
+}
+
+body{
+  font-family: "Noto Sans TC", "Merriweather", sans-serif;
+  overflow-x: hidden;
+}
+
+.eng{
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-style: italic;
+}
+
+section{
+  padding: 50px 0;
+}
+
+// ----- 導覽列 -----
+nav.navbar{
+  padding: 20px 0;
+  transition: 0.5s; //讓nav底色切換時緩和一點
+}
+
+// 要蓋過 BS5 權重
+// navbar-top 是自訂的 class
+.navbar.fixed-top.navbar-expand-md.navbar-top{
+  border-bottom: 1px solid lightgrey;
+  a{
+    color: white;
+    transition: 0.5s;
+    &:hover{
+       color: $color_gold;
+    }
+  }
+}
+
+// ----- 首頁橫幅 -----
+header{
+  position: relative; //父層要有這個相對定位，:before的絕對定位才抓得到相對位置。
+  text-align: center;
+  color: white;
+  
+  // 讓背景圖與與文字放在不同層，文字在上，背景在下。
+  // 單獨針對背景圖處理亮度變暗，而文字亮度不變。
+  &:before{
+    content: '';
+    display: block; //用來撐滿父層
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(img/swing_dance-color.jpg);
+    background-position-x: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; //讓背景圖固定位置不跟著滑動
+    filter: brightness(0.5); // 調暗背景
+    z-index: -1;
+    
+  }
+  
+  .header__container{
+    padding: 250px 0;
+  }
+
+  h1{
+    font-size: 56px;
+  }
+
+  h2{
+    margin-top: 20px;
+    font-size: 36px;
+  }
+  
+  h4{
+    margin-top: 40px;
+  }
+
+}
+
+// history 背景介紹區塊
+section#section_history{
+  padding: 80px 0;
+  background-color: gainsboro;
+  
+  h2{
+    line-height: 1.5;
+  }
+
+  p{
+    line-height: 2;
+  }
+
+  .img_history{
+    img{
+      height: 100%;
+      object-fit: contain;
+     }
+    }
+  
+  
+  .col-sm-7{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2{
+    
+    // 有額外在 HTML class 設定 mt-5 和 mt-sm-0
+    // 當視窗寬度超小，介於 0~479px 時，呈現垂直排版，此時套用 mt-5 給出 margin-top ，讓文字頭頂不會緊貼圖片
+    // 而當視窗寬度大於等於 480px 開始，呈現水平排版，則套用 mt-sm-0 可消除 margin-top，切換為使用 flex 達到垂直置中
+  }
+}
+
+
+// intro2 背景介紹區塊
+section#section_definition{
+  .img_definition{
+    margin-top: -140px;
+    min-height: 350px;
+    background-image: url(img/swing_dance-oldTimes.jpg);
+    // background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+   }
+
+
+  .definition_text{
+    padding: 0px 40px;
+    
+    p{
+      margin-bottom: 0;
+      line-height: 2;
+    }
+ 
+  }
+
+ 
+
+}
+
+
+// styles 舞風區塊
+section#section_styles{
+  text-align: center;
+
+  .style_text{
+    text-align:justify;
+  }
+
+  .img-wrap{
+    -webkit-spect-ratio: 1 / 1;
+    -moz-spect-ratio: 1 / 1;
+    -ms-aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1; //讓圓球保持1:1等比例縮放
+    border-radius: 50%;
+    overflow: hidden; //裁切掉超出容器的圖片
+  }
+  
+  img{
+    //強制讓所有不同等寬高的圖片都拉滿填滿父層容器
+    width: 100%;
+    height: 100%;  
+    object-fit: cover; //讓圖片內容保持等比例拉大填滿容器後，多餘的隱蔽
+  }
+  
+  h3{
+    margin-top: 10px;
+  }
+  
+  p{
+    line-height: 1.75;
+  }
+  
+}
+
+// video影片區塊
+section#section_video{
+  padding: 0 ;
+
+  .video{
+    background-color: black;
+    padding: 20px 0;
+  }
+  .embed-container { 
+    position: relative; 
+    max-width: 100%; 
+    padding: 15% 0;
+
+    // padding-bottom: 56.25%; 
+    // height: 0; 
+    // overflow: hidden; 
+    
+  } 
+
+    .embed-container iframe, 
+     { 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+    }
+}
+
+// course 課程區塊
+section#section_course{
+  background-color: #eee;
+  .card{
+    width: 100%;
+  }
+  
+  .card-img-cap{
+    height: 250px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+    }
+  }
+
+  .card-body{
+    padding: 20px;
+
+    .card-title{
+      line-height: 1.5;
+      font-size: 24px;
+    }
+
+    .card-text{
+      line-height: 2;
+      margin-bottom: 10px;
+    }
+  
+    .btn-sign-up{
+      color: black;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: white;
+      background-color: SeaGreen;
+      text-align: center ;
+    }
+  }
+
+
+}
+
+footer{
+  position: relative; //父層要有這個相對定位，:before的絕對定位才抓得到相對位置。  
+  // 讓背景圖與與文字放在不同層，文字在上，背景在下。
+  // 單獨針對背景圖處理亮度變暗，而文字亮度不變。
+
+  &:before{
+    content: '';
+    display: block; //用來撐滿父層
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(img/swing-dance-party.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed; //讓背景圖固定位置不跟著滑動
+    filter: brightness(0.5); // 調暗背景
+    z-index: -1;}
+  
+  .container.footer{
+    color: white;
+    padding: 120px 0;
+  }
+  input{
+    background-color: rgba(white, 0.5);
+    max-width: 350px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: auto; 
+  }
+
+  button{
+    margin-top: 20px;
+  }
+
+  a{
+    color: white;
+    &:hover{
+      color: orange;
+      transition-duration: .2s;
+    }
+  }
+
+  .footer_item-title{
+    color: orange;
+  }
+    
+
+}

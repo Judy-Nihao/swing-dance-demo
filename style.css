@@ -6,24 +6,23 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  display: block;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: top;
-}
-
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 30px;
 }
 
 body {
   font-family: "Noto Sans TC", "Merriweather", sans-serif;
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
 }
 
 .eng {
@@ -37,7 +36,7 @@ section {
 }
 
 nav.navbar {
-  padding: 20px 0;
+  padding: 10px 0;
   transition: 0.5s;
 }
 
@@ -45,11 +44,10 @@ nav.navbar {
   border-bottom: 1px solid lightgrey;
 }
 .navbar.fixed-top.navbar-expand-md.navbar-top a {
-  color: white;
   transition: 0.5s;
 }
 .navbar.fixed-top.navbar-expand-md.navbar-top a:hover {
-  color: #916019;
+  color: #df972b;
 }
 
 header {
@@ -78,11 +76,11 @@ header h1 {
   font-size: 56px;
 }
 header h2 {
-  margin-top: 20px;
-  font-size: 36px;
+  margin-top: 30px;
 }
-header h4 {
+header h4.eng {
   margin-top: 40px;
+  font-weight: 400;
 }
 
 section#section_history {
@@ -111,16 +109,18 @@ section#section_definition .img_definition {
   background-position: center center;
   background-size: contain;
 }
-section#section_definition .definition_text {
-  padding: 0px 40px;
-}
-section#section_definition .definition_text p {
-  margin-bottom: 0;
-  line-height: 2;
-}
 
 section#section_styles {
   text-align: center;
+}
+section#section_styles .dance-style:hover {
+  transition: all 0.2s linear;
+  background-color: #EFEBE5;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+section#section_styles .dance-style:hover img {
+  transition: all 0.2s linear;
+  transform: scale(1.1);
 }
 section#section_styles .style_text {
   text-align: justify;
@@ -156,7 +156,7 @@ section#section_video .video {
 section#section_video .embed-container {
   position: relative;
   max-width: 100%;
-  padding: 15% 0;
+  padding: 200px 0;
 }
 section#section_video .embed-container iframe {
   position: absolute;
@@ -194,11 +194,12 @@ section#section_course .card-body .card-text {
   margin-bottom: 10px;
 }
 section#section_course .card-body .btn-sign-up {
+  display: block;
   color: black;
   padding: 8px 12px;
   border-radius: 6px;
   color: white;
-  background-color: SeaGreen;
+  background-color: #df972b;
   text-align: center;
 }
 
@@ -223,13 +224,15 @@ footer .container.footer {
   color: white;
   padding: 120px 0;
 }
-footer input {
+footer input.form-control {
   background-color: rgba(255, 255, 255, 0.5);
   max-width: 350px;
-  text-align: center;
   margin-top: 20px;
   margin-left: 0;
   margin-right: auto;
+}
+footer input.form-control:focus {
+  border: 2px solid #df972b;
 }
 footer button {
   margin-top: 20px;
@@ -238,9 +241,9 @@ footer a {
   color: white;
 }
 footer a:hover {
-  color: orange;
+  color: #df972b;
   transition-duration: 0.2s;
 }
 footer .footer_item-title {
-  color: orange;
+  color: #df972b;
 }/*# sourceMappingURL=style.css.map */

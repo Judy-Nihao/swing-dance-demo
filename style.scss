@@ -10,6 +10,13 @@ $color_gold: #df972b;
 $scroll_padding: 30px;
 $scroll_padding: 45px !default;
 
+//========== 斷點 ========== 
+@mixin pad{
+  @media(min-width:768px){
+    @content;
+  }
+}
+
 
 // ========== 文件基礎樣式 ========== 
 *{
@@ -20,17 +27,15 @@ $scroll_padding: 45px !default;
 }
 
 html{
+  width: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: $scroll_padding; //點擊頂端章節目錄畫面滑動到標題時讓 navbar 不會擋到標題
 }
 
 body{
+  width: 100%;
   font-family: "Noto Sans TC", "Merriweather", sans-serif;
-  // skrollr位移會讓元素暫時溢出去所以要隱藏
-  overflow-x: hidden;
 }
-
-
 
 // ========== 內容共用樣式 ========== 
 
@@ -54,11 +59,18 @@ section{
   padding: 50px 0;
 }
 
+
+.wrapper{
+    // skrollr位移會讓元素暫時溢出去所以要隱藏
+    overflow-x: hidden;
+}
+
 // ----- 導覽列 -----
 nav.navbar{
   padding: 10px 0;
   transition: 0.5s; //讓nav底色切換時緩和一點
 }
+
 
 // 要蓋過 BS5 權重
 // navbar-top 是自訂的 class
@@ -97,9 +109,25 @@ header{
     z-index: -1;
     
   }
+
+}
+
+@keyframes showUp{
+  0%{opacity: 0; bottom: -20px; }
+  100%{opacity: 1; bottom: 0px; }
+}
+
+@keyframes showDown{
+  0%{opacity: 0; top: -20px;}
+  100%{opacity: 1; top: 0;}
+}
   
-  .header__container{
-    padding: 250px 0;
+.header__container{
+  padding: 250px 0;
+
+  &__title{
+    position: relative;
+    animation: showUp 1s ease-in 1;
   }
 
   h1{
@@ -111,12 +139,12 @@ header{
   }
   
   h4.eng{
-    margin-top: 40px;
+    position: relative;
+    margin-top: 20px;
     font-weight: 400;
+    letter-spacing: 1px;
+    animation: showDown 1s ease-in 1;
   }
-
-  
-
 }
 
 // history 背景介紹區塊
@@ -153,6 +181,27 @@ section#section_history{
   }
 }
 
+@keyframes upDown{
+  0% {top: 0;}
+  50% {top: 30px;}
+  100% {top: 0;}
+}
+
+.swing-pair{
+    position: relative;
+    animation: upDown 1.5s ease-in-out infinite;
+    @include pad{
+      animation:none;
+    }
+    
+}
+
+
+@keyframes boom{
+  0% {background-size: 100%}
+  50% {background-size: 120%}
+  100% {background-size: 100%}
+}
 
 // intro2 背景介紹區塊
 section#section_definition{
@@ -160,11 +209,13 @@ section#section_definition{
     margin-top: -140px;
     min-height: 350px;
     background-image: url(img/swing_dance-oldTimes.jpg);
-    // background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
+    animation: boom 1.5s ease-in-out infinite;
+    @include pad{
+      animation:none;
+    }
    }
- 
 
 }
 

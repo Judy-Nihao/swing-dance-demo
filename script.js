@@ -23,13 +23,18 @@ $(window).scroll(function(event){
   
 });
 
-var s = skrollr.init();
+if(window.innerWidth > 767){
+  var s = skrollr.init();
+}
+
 
 
 // 偵測導覽列的高度，解決導覽列點擊頁籤後會覆蓋內容的現象
-const navBar = document.querySelector("nav.navbar");
-const navBarHeight = navBar.getBoundingClientRect().height;
+// const navBar = document.querySelector("nav.navbar");
+// const navBarHeight = navBar.getBoundingClientRect().height;
 
 // 用偵測到的導覽列高度，取代 html 樣式中 scroll-padding-top 的值
-document.documentElement.style.setProperty("scroll-padding-top", navBarHeight + "px" )
+// document.documentElement.style.setProperty("scroll-padding-top", navBarHeight + "px" )
 
+let navBarHeight = $("nav.navbar").outerHeight();
+$('html').attr("scroll-padding-top", navBarHeight + "px" )

@@ -13,6 +13,7 @@
 
 </head>
 <body>
+<div class="wrapper">
 <!--  collapse 預設隱藏，設定在某種螢幕寬度下展開 expand 才看得到選單 -->
 <!--  預設 navbar-dark 讓行動版漢堡選單初始就能顯示淺色線條。否則畫面初始載入時是看不到漢堡線條的-->
 <nav class="navbar navbar-expand-md fixed-top navbar-top navbar-dark">
@@ -37,20 +38,20 @@
   </div>
 </nav>
 
+
 <header>
   <div class="container header__container">
-    <div class="header__title" data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)">
+    <div class="header__container__title" data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)">
       <h1 class="eng">Story of Swing Dance</h1>
       <h2>── ･ ｡ﾟ☆: *. 一起搖擺 .* :☆ﾟ. ──</h2>
     </div>
     <h4 class="eng">Ready to give it a Swing?</h4>
   </div>
 </header>
-
 <section id="section_history">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 d-flex flex-column justify-content-center" data-100="transform:translateX(-150px);" data-center="transform:translateX(0px);">
+      <div class="col-md-6 px-4 px-lg-0 d-flex flex-column justify-content-center" data-100="transform:translateX(-150px);" data-center="transform:translateX(0px);">
         <h2>
           來自<span class="eng"> 1920 </span>年代 
           <br>
@@ -61,7 +62,7 @@
       </div>
 
       <div class="col-md-6 img_history" data-100="transform:translateX(150px);" data-center="transform:translateX(-50px);">
-        <img src="img/swing_dance-BW-pair-removebg-Big.png" alt="">
+        <img class="swing-pair" src="img/swing_dance-BW-pair-removebg-Big.png" alt="">
       </div>
 
     </div>
@@ -73,8 +74,8 @@
     <div class="row">
       <div class="mt-1 mt-sm-0 col-lg-5 img_definition" data-bottom-top="opacity: 0; background-size: 108%; margin-top: -200px;" data-center="opacity: 1; background-size: 120%; margin-top: -140px;" >
       </div>
-      <div class="col-lg-7 px-0 px-lg-4" data-bottom-top="transform: translateY(50px); scale:1.15; opacity: 0;" data-center="transform: translateY(0px); scale: 1; opacity: 1;">
-        <h2 class="mt-3 mt-lg-0 ">搖擺舞和國標舞的差別</h2>
+      <div class="col-lg-7 px-4" data-bottom-top="transform: translateY(50px); scale:1.15; opacity: 0;" data-center="transform: translateY(0px); scale: 1; opacity: 1;">
+        <h2 class="mt-5 mt-lg-0 ">搖擺舞和國標舞的差別</h2>
         <p class="lh-lg">搖擺舞 (Swing Dance) 復古又俏皮，強調人與人之間的互動，不像國標舞每次都有固定的搭檔。
           Swing Dance 是一種「社交舞」藉由跳舞來與人交流，幾乎每次都跟不同的人跳舞，通常一首歌的時間換一個舞伴，再加上「爵士樂」是非常即興的，就算是同一首歌、同一個樂手演奏，都不會聽到一模一樣版本的音樂。它的隨性也很令人著迷，每次聽都有不一樣的感覺。
           這簡單易學又好玩的搖擺舞，流傳至今，成為都市人最愛的下班後生活娛樂！</p>
@@ -139,7 +140,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center py-5">         
-        <h2 class="eng" data-bottom-top="transform: translateY(-65px); opacity: 0;" data-center="transform: translateY(0px); opacity: 1;">───── ⋆⋅Show Time⋅⋆ ─────</h2>
+        <h2 class="eng" data-bottom-top="transform: translateY(-65px); opacity: 0;" data-center="transform: translateY(0px); opacity: 1;"> ~ ⋆⋅ Show Time ⋅⋆ ~</h2>
       </div>
     </div>
   </div>
@@ -189,7 +190,7 @@
       </div>
       
       <div class="col-12 col-md-4">
-        <div class="card" >
+        <div class="card mt-4 mt-md-0" >
           <div class="card-img-cap">
             <img src="img/blueDance.jpg" class="card-img-top" alt="...">
           </div>
@@ -208,7 +209,7 @@
         </div>
       </div>
       <div class="col-12 col-md-4">
-        <div class="card">
+        <div class="card mt-4 mt-md-0">
           <div class="card-img-cap">
             <img src="img/swing-dance-moment-05.webp" class="card-img-top" alt="...">
           </div>
@@ -278,6 +279,6 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
 <script  src="./script.js"></script>
-
+</div>
 </body>
 </html>

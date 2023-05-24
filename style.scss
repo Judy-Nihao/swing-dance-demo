@@ -7,15 +7,7 @@
 
 // ========== 變數 ========== 
 $color_gold: #df972b;
-$scroll_padding: 30px;
-$scroll_padding: 45px !default;
-
-//========== 斷點 ========== 
-@mixin pad{
-  @media(min-width:768px){
-    @content;
-  }
-}
+$scroll_padding: 60px;
 
 
 // ========== 文件基礎樣式 ========== 
@@ -29,7 +21,8 @@ $scroll_padding: 45px !default;
 html{
   width: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: $scroll_padding; //點擊頂端章節目錄畫面滑動到標題時讓 navbar 不會擋到標題
+  scroll-padding-top: $scroll_padding; 
+  //點擊頂端章節目錄畫面滑動到標題時讓 navbar 不會擋到標題
 }
 
 body{
@@ -61,7 +54,7 @@ section{
 
 
 .wrapper{
-    // skrollr位移會讓元素暫時溢出去所以要隱藏
+    // aos 動畫特效位移元素，要隱藏溢出部分
     overflow-x: hidden;
 }
 
@@ -111,16 +104,6 @@ header{
   }
 
 }
-
-@keyframes showUp{
-  0%{opacity: 0; bottom: -20px; }
-  100%{opacity: 1; bottom: 0px; }
-}
-
-@keyframes showDown{
-  0%{opacity: 0; top: -20px;}
-  100%{opacity: 1; top: 0;}
-}
   
 .header__container{
   padding: 250px 0;
@@ -140,10 +123,9 @@ header{
   
   h4.eng{
     position: relative;
-    margin-top: 20px;
+    margin-top: 40px;
     font-weight: 400;
     letter-spacing: 1px;
-    animation: showDown 1s ease-in 1;
   }
 }
 
@@ -174,34 +156,17 @@ section#section_history{
   }
   
   h2{
-    
     // 有額外在 HTML class 設定 mt-5 和 mt-sm-0
     // 當視窗寬度超小，介於 0~479px 時，呈現垂直排版，此時套用 mt-5 給出 margin-top ，讓文字頭頂不會緊貼圖片
     // 而當視窗寬度大於等於 480px 開始，呈現水平排版，則套用 mt-sm-0 可消除 margin-top，切換為使用 flex 達到垂直置中
   }
 }
 
-@keyframes upDown{
-  0% {top: 0;}
-  50% {top: 30px;}
-  100% {top: 0;}
-}
 
 .swing-pair{
     position: relative;
-    animation: upDown 1.5s ease-in-out infinite;
-    @include pad{
-      animation:none;
-    }
-    
 }
 
-
-@keyframes boom{
-  0% {background-size: 100%}
-  50% {background-size: 120%}
-  100% {background-size: 100%}
-}
 
 // intro2 背景介紹區塊
 section#section_definition{
@@ -211,10 +176,6 @@ section#section_definition{
     background-image: url(img/swing_dance-oldTimes.jpg);
     background-position: center center;
     background-size: contain;
-    animation: boom 1.5s ease-in-out infinite;
-    @include pad{
-      animation:none;
-    }
    }
 
 }
@@ -240,19 +201,22 @@ section#section_styles{
   }
 
   .img-wrap{
+    // 讓圖片圓形遮罩保持1:1等比例縮放
+    // 並裁切掉超出容器的圖片
     -webkit-spect-ratio: 1 / 1;
     -moz-spect-ratio: 1 / 1;
     -ms-aspect-ratio: 1 / 1;
-    aspect-ratio: 1 / 1; //讓圓球保持1:1等比例縮放
+    aspect-ratio: 1 / 1; 
     border-radius: 50%;
-    overflow: hidden; //裁切掉超出容器的圖片
+    overflow: hidden; 
   }
   
   img{
-    //強制讓所有不同等寬高的圖片都拉滿填滿父層容器
+    // 強制讓所有不同等寬高的圖片都拉滿填滿父層容器
+    // 讓圖片內容保持等比例拉大填滿容器後，隱蔽多餘部分
     width: 100%;
     height: 100%;  
-    object-fit: cover; //讓圖片內容保持等比例拉大填滿容器後，隱蔽多餘部分
+    object-fit: cover; 
   }
   
   h3{
@@ -284,8 +248,7 @@ section#section_video{
     
   } 
 
-    .embed-container iframe, 
-     { 
+    .embed-container iframe{ 
       position: absolute; 
       top: 0; 
       left: 0; 
@@ -334,8 +297,6 @@ section#section_course{
       text-align: center ;
     }
   }
-
-
 }
 
 footer{
@@ -346,7 +307,7 @@ footer{
 
   &:before{
     content: '';
-    display: block; //用來撐滿父層
+    display: block;//block才能撐滿父層 
     width: 100%;
     height: 100%;
     position: absolute;

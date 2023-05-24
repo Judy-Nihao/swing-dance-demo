@@ -1,7 +1,3 @@
-// 記得要 CDN 載入 BS5 的 JS ，手機版的漢堡選單 navbar 才會有效
-
-console.clear();
-
 $(window).scroll(function(event){
   if($(window).scrollTop() > 0 ){
     // 往下滑動時
@@ -23,18 +19,18 @@ $(window).scroll(function(event){
   
 });
 
-if(window.innerWidth > 767){
-  var s = skrollr.init();
-}
 
+//引入動畫套件
+AOS.init();
 
 
 // 偵測導覽列的高度，解決導覽列點擊頁籤後會覆蓋內容的現象
+// 用偵測到的導覽列高度，取代 html 樣式中 scroll-padding-top 的值
+
 // const navBar = document.querySelector("nav.navbar");
 // const navBarHeight = navBar.getBoundingClientRect().height;
-
-// 用偵測到的導覽列高度，取代 html 樣式中 scroll-padding-top 的值
 // document.documentElement.style.setProperty("scroll-padding-top", navBarHeight + "px" )
 
+//jQuery寫法
 let navBarHeight = $("nav.navbar").outerHeight();
-$('html').attr("scroll-padding-top", navBarHeight + "px" )
+$('html').css("scroll-padding-top", navBarHeight + "px");

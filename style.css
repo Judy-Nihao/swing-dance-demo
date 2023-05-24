@@ -9,7 +9,7 @@
 html {
   width: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 30px;
+  scroll-padding-top: 60px;
 }
 
 body {
@@ -75,26 +75,6 @@ header:before {
   z-index: -1;
 }
 
-@keyframes showUp {
-  0% {
-    opacity: 0;
-    bottom: -20px;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0px;
-  }
-}
-@keyframes showDown {
-  0% {
-    opacity: 0;
-    top: -20px;
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-  }
-}
 .header__container {
   padding: 250px 0;
 }
@@ -110,10 +90,9 @@ header:before {
 }
 .header__container h4.eng {
   position: relative;
-  margin-top: 20px;
+  margin-top: 40px;
   font-weight: 400;
   letter-spacing: 1px;
-  animation: showDown 1s ease-in 1;
 }
 
 section#section_history {
@@ -135,50 +114,16 @@ section#section_history .col-sm-7 {
   display: flex;
   flex-direction: column;
 }
-@keyframes upDown {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: 30px;
-  }
-  100% {
-    top: 0;
-  }
-}
 .swing-pair {
   position: relative;
-  animation: upDown 1.5s ease-in-out infinite;
-}
-@media (min-width: 768px) {
-  .swing-pair {
-    animation: none;
-  }
 }
 
-@keyframes boom {
-  0% {
-    background-size: 100%;
-  }
-  50% {
-    background-size: 120%;
-  }
-  100% {
-    background-size: 100%;
-  }
-}
 section#section_definition .img_definition {
   margin-top: -140px;
   min-height: 350px;
   background-image: url(img/swing_dance-oldTimes.jpg);
   background-position: center center;
   background-size: contain;
-  animation: boom 1.5s ease-in-out infinite;
-}
-@media (min-width: 768px) {
-  section#section_definition .img_definition {
-    animation: none;
-  }
 }
 
 section#section_styles {
